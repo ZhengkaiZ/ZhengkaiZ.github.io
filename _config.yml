@@ -16,7 +16,7 @@
 title: Zhengkai Zhang
 email: zzhengkai2017@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-I currenly work in Amazon as a software development engineer. 
+"I currenly work in Amazon as a software development engineer. "
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: ZhengkaiZ
