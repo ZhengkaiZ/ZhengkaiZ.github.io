@@ -95,12 +95,11 @@ a:focus-visible { outline: 2px solid #367a99; outline-offset: 3px; }
 .publication p { color: #758089; font-size: 14px; margin: 0 0 2px; }
 .publication a { font-size: 14px; font-weight: 600; }
 .blog-page > p { margin: 0; }
-.blog-posts, .empty-note { border-top: 1px solid #e3e6e8; margin-top: 35px !important; padding-top: 26px; }
-.empty-note { color: #758089; }
+.blog-posts { border-top: 1px solid #e3e6e8; margin-top: 35px; padding-top: 26px; }
 .post-item { margin: 0 0 27px; }
 .post-item time { color: #758089; font-size: 13px; }
 .post-item h2 { font-size: 17px; margin: 2px 0 4px; }
-.post-item p { margin: 0; }
+.post-item p { color: #758089; font-size: 14px; margin: 0; }
 
 .site-footer { background: #f8f9fa; border-top: 1px solid #eceeef; }
 .footer-inner {

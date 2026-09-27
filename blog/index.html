@@ -8,10 +8,24 @@ permalink: /blog/
   <header class="page-heading">
     <h1>Blog</h1>
   </header>
-  <p>Notes on AI inference, performance, and the systems behind them.</p>
+  <p>Articles and notes on AI inference, performance, and the systems behind them.</p>
 
-  {% if site.posts.size > 0 %}
   <div class="blog-posts">
+    <article class="post-item">
+      <time datetime="2026-05-05">May 2026</time>
+      <h2><a href="https://pytorch.org/blog/in-kernel-broadcast-optimization-co-designing-kernels-for-recsys-inference/">In-Kernel Broadcast Optimization: Co-Designing Kernels for RecSys Inference</a></h2>
+      <p>PyTorch Blog</p>
+    </article>
+    <article class="post-item">
+      <time datetime="2026-03-31">March 2026</time>
+      <h2><a href="https://engineering.fb.com/2026/03/31/ml-applications/meta-adaptive-ranking-model-bending-the-inference-scaling-curve-to-serve-llm-scale-models-for-ads/">Meta Adaptive Ranking Model: Bending the Inference Scaling Curve to Serve LLM-Scale Models for Ads</a></h2>
+      <p>Engineering at Meta</p>
+    </article>
+    <article class="post-item">
+      <time datetime="2026-02-05">February 2026</time>
+      <h2><a href="https://pytorch.org/blog/building-highly-efficient-inference-system-for-recommenders-using-pytorch/">Building Highly Efficient Inference System for Recommenders Using PyTorch</a></h2>
+      <p>PyTorch Blog</p>
+    </article>
     {% for post in site.posts %}
     <article class="post-item">
       <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%B %-d, %Y' }}</time>
@@ -20,7 +34,4 @@ permalink: /blog/
     </article>
     {% endfor %}
   </div>
-  {% else %}
-  <p class="empty-note">Posts coming soon.</p>
-  {% endif %}
 </article>
