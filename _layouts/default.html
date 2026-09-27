@@ -12,7 +12,9 @@
     {% include header.html %}
     <div class="page-layout">
       <aside class="profile-sidebar" aria-label="Profile">
-        <img class="avatar" src="{{ '/assets/profile.jpg' | relative_url }}" alt="Zhengkai Zhang" width="184" height="184">
+        <div class="avatar-frame">
+          <img class="avatar" src="{{ '/assets/profile.jpg' | relative_url }}" alt="Zhengkai Zhang" width="184" height="184">
+        </div>
         <div class="profile-details">
           <h2>Zhengkai Zhang</h2>
           <p>Software Engineer at Meta</p>
