@@ -1,0 +1,30 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+
+<div class="blog-page">
+  <header class="page-intro">
+    <p class="eyebrow">Writing</p>
+    <h1>Blog</h1>
+    <p>Notes on AI inference, performance, and the systems behind them.</p>
+  </header>
+
+  {% if site.posts.size > 0 %}
+  <div class="blog-list">
+    {% for post in site.posts %}
+    <article class="blog-item">
+      <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%B %-d, %Y' }}</time>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+      {% if post.excerpt %}<p>{{ post.excerpt | strip_html | truncatewords: 36 }}</p>{% endif %}
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="empty-state">
+    <h2>Posts are on the way.</h2>
+    <p>I'll share new writing here. In the meantime, you can <a href="{{ '/assets/Zhengkai_Zhang_Resume.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">explore my work in my résumé</a>.</p>
+  </div>
+  {% endif %}
+</div>
