@@ -1,62 +1,66 @@
 ---
 layout: default
+title: About Me
 ---
 
-<div class="landing">
-  <section class="hero" aria-labelledby="intro-heading">
-    <div class="hero-copy">
-      <p class="eyebrow">Software engineer · AI infrastructure</p>
-      <h1 id="intro-heading">Hi, I'm Zhengkai Zhang.</h1>
-      <p class="hero-lead">I make AI inference faster and more efficient.</p>
-      <p class="hero-description">I'm a software engineer at Meta, where I work on LLM serving, model performance, and recommendation inference. Previously, I built large-scale serverless systems at Amazon.</p>
-      <div class="hero-actions">
-        <a class="button button-primary" href="{{ '/assets/Zhengkai_Zhang_Resume.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">View my résumé <span aria-hidden="true">↗</span></a>
-        <a class="button button-secondary" href="{{ '/blog/' | relative_url }}">Read the blog <span aria-hidden="true">→</span></a>
+<article class="about-page">
+  <header class="page-heading">
+    <h1>About Me</h1>
+  </header>
+
+  <div class="intro-copy">
+    <p>I am a software engineer at Meta, where I work on large language model serving, model performance, and recommendation inference. My focus is making advanced models faster and more efficient to run in production.</p>
+    <p>My work spans inference runtimes, compilers, GPU optimization, and low-precision deployment. Previously, I built serverless infrastructure at Amazon. You can find more detail in <a href="{{ '/assets/Zhengkai_Zhang_Resume.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">my résumé</a>.</p>
+  </div>
+
+  <section class="content-section" aria-labelledby="experience-heading">
+    <h2 id="experience-heading">Experience</h2>
+    <div class="entry">
+      <div class="entry-heading">
+        <h3>Meta Platforms</h3>
+        <span>2022–present</span>
       </div>
+      <p class="entry-role">Software Engineer · Inference Optimization</p>
+      <p>Optimizing LLM serving and recommendation systems across compilers, runtimes, and accelerators. Recent work includes speculative decoding, quantization, GPU feature processing, and inference portability across hardware platforms.</p>
     </div>
-    <aside class="focus-card" aria-label="Current focus">
-      <p class="focus-label">Current focus</p>
-      <p class="focus-heading">Making advanced models practical to serve.</p>
-      <ul>
-        <li>LLM inference and quantization</li>
-        <li>Recommendation systems</li>
-        <li>Compilers and GPU performance</li>
-      </ul>
-    </aside>
-  </section>
-
-  <section class="section work-section" aria-labelledby="work-heading">
-    <div class="section-heading">
-      <p class="eyebrow">Experience</p>
-      <h2 id="work-heading">What I've been working on</h2>
-    </div>
-    <div class="work-grid">
-      <article class="work-card">
-        <p class="card-kicker">Meta · LLM inference</p>
-        <h3>Faster model serving</h3>
-        <p>Optimizing serving runtimes, speculative decoding, and low-precision deployment. Recent work reduced time per output token by 30–40% and cut a large-model quantization workflow from one hour to ten minutes.</p>
-      </article>
-      <article class="work-card">
-        <p class="card-kicker">Meta · Recommendation systems</p>
-        <h3>Inference at scale</h3>
-        <p>Leading work across compilers, runtimes, and accelerators to make ranking models more efficient and portable across GPUs, CPUs, and MTIA.</p>
-      </article>
-      <article class="work-card">
-        <p class="card-kicker">Amazon · Serverless systems</p>
-        <h3>Reliable infrastructure</h3>
-        <p>Led a serverless redesign of a warehouse protection system, increasing supported capacity from 400 to 30,000 warehouses per region.</p>
-      </article>
+    <div class="entry">
+      <div class="entry-heading">
+        <h3>Amazon</h3>
+        <span>2019–2022</span>
+      </div>
+      <p class="entry-role">Software Development Engineer</p>
+      <p>Built and scaled serverless systems for warehouse risk and overcharge protection, including a redesign that expanded supported capacity from 400 to 30,000 warehouses per region.</p>
     </div>
   </section>
 
-  <section class="section about-section" aria-labelledby="about-heading">
-    <div>
-      <p class="eyebrow">Background</p>
-      <h2 id="about-heading">A little more about me</h2>
-    </div>
-    <div class="about-copy">
-      <p>I earned a master's degree in Electrical and Computer Engineering from Carnegie Mellon University and a bachelor's degree in Electrical Engineering from Texas A&amp;M University. I enjoy working where systems, machine learning, and real-world performance meet.</p>
-      <p>For more details, <a href="{{ '/assets/Zhengkai_Zhang_Resume.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">read my résumé</a> or get in touch at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
-    </div>
+  <section class="content-section" aria-labelledby="education-heading">
+    <h2 id="education-heading">Education</h2>
+    <ul class="plain-list">
+      <li><strong>M.S. in Electrical and Computer Engineering</strong>, Carnegie Mellon University, 2019</li>
+      <li><strong>B.S. in Electrical Engineering</strong>, Texas A&amp;M University, 2017</li>
+    </ul>
   </section>
-</div>
+
+  <section class="content-section" aria-labelledby="publications-heading">
+    <h2 id="publications-heading">Selected Publications</h2>
+    <div class="publication-list">
+      <article class="publication">
+        <h3>ROCS: Request-Oriented Compute Sharing for Efficient Large-Scale Recommendation</h3>
+        <p>Co-author · arXiv, 2026</p>
+        <a href="https://arxiv.org/abs/2607.27744">Paper</a>
+      </article>
+      <article class="publication">
+        <h3>SOLARIS: Speculative Offloading of Latent-bAsed Representation for Inference Scaling</h3>
+        <p>Co-author · SIGIR Industry Track, 2026</p>
+        <a href="https://arxiv.org/abs/2604.12110">Paper</a>
+      </article>
+    </div>
+    <p class="section-note">For articles and technical posts, visit the <a href="{{ '/blog/' | relative_url }}">Blog</a>.</p>
+  </section>
+
+  <section class="content-section" aria-labelledby="skills-heading">
+    <h2 id="skills-heading">Skills</h2>
+    <p><strong>Languages:</strong> Python, C/C++, CUDA, Java, Go, Bash</p>
+    <p><strong>Tools and frameworks:</strong> PyTorch, Triton, TorchRec, FBGEMM, AITemplate, vLLM, SGLang, Docker, AWS</p>
+  </section>
+</article>

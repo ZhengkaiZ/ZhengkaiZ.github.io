@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description | escape }}">
+    <title>{% if page.title %}{{ page.title | escape }} - {% endif %}{{ site.title | escape }}</title>
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+    <link rel="alternate" type="application/atom+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
+  </head>
+  <body>
+    {% include header.html %}
+    <div class="page-layout">
+      <aside class="profile-sidebar" aria-label="Profile">
+        <img class="avatar" src="{{ '/assets/profile.jpg' | relative_url }}" alt="Zhengkai Zhang" width="184" height="184">
+        <div class="profile-details">
+          <h2>Zhengkai Zhang</h2>
+          <p>Software Engineer at Meta</p>
+          <ul class="profile-links">
+            <li><a href="mailto:{{ site.email }}">Email</a></li>
+            <li><a href="{{ '/assets/Zhengkai_Zhang_Resume.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">Résumé</a></li>
+            <li><a href="https://github.com/{{ site.github_username }}">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}/">LinkedIn</a></li>
+          </ul>
+        </div>
+      </aside>
+      <main id="main-content" class="page-main">
+        {{ content }}
+      </main>
+    </div>
+    {% include footer.html %}
+  </body>
+</html>
