@@ -8,39 +8,19 @@ permalink: /blog/
   <header class="page-heading">
     <h1>Blog</h1>
   </header>
-  <p>Writing on efficient machine learning systems and inference. These are articles I have co-authored; I will also share my own notes here.</p>
-
-  <section class="content-section" aria-labelledby="writing-heading">
-    <h2 id="writing-heading">Selected Writing</h2>
-    <div class="publication-list">
-      <article class="publication">
-        <h3>In-Kernel Broadcast Optimization: Co-Designing Kernels for RecSys Inference</h3>
-        <p>PyTorch Blog · 2026</p>
-        <a href="https://pytorch.org/blog/in-kernel-broadcast-optimization-co-designing-kernels-for-recsys-inference/">Read article</a>
-      </article>
-      <article class="publication">
-        <h3>Meta Adaptive Ranking Model: Bending the Inference Scaling Curve to Serve LLM-Scale Models for Ads</h3>
-        <p>Engineering at Meta · 2026</p>
-        <a href="https://engineering.fb.com/2026/03/31/ml-applications/meta-adaptive-ranking-model-bending-the-inference-scaling-curve-to-serve-llm-scale-models-for-ads/">Read article</a>
-      </article>
-      <article class="publication">
-        <h3>Building Highly Efficient Inference System for Recommenders Using PyTorch</h3>
-        <p>PyTorch Blog · 2026</p>
-        <a href="https://pytorch.org/blog/building-highly-efficient-inference-system-for-recommenders-using-pytorch/">Read article</a>
-      </article>
-    </div>
-  </section>
+  <p>Notes on AI inference, performance, and the systems behind them.</p>
 
   {% if site.posts.size > 0 %}
-  <section class="content-section" aria-labelledby="posts-heading">
-    <h2 id="posts-heading">Posts</h2>
+  <div class="blog-posts">
     {% for post in site.posts %}
     <article class="post-item">
       <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%B %-d, %Y' }}</time>
-      <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
       {% if post.excerpt %}<p>{{ post.excerpt | strip_html | truncatewords: 32 }}</p>{% endif %}
     </article>
     {% endfor %}
-  </section>
+  </div>
+  {% else %}
+  <p class="empty-note">Posts coming soon.</p>
   {% endif %}
 </article>
